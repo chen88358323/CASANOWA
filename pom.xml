@@ -162,8 +162,8 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
 				</configuration>
 				<version>2.3.2</version>
 			</plugin>
@@ -195,6 +195,7 @@
 	<properties>
 		<webapp.port>8080</webapp.port>
 		<webapp.stopPort>9090</webapp.stopPort>
+		<jdk.version>1.6</jdk.version>
 		<webapp.path>/</webapp.path>
 		<spring.version>3.2.4.RELEASE</spring.version>
 	</properties>
