@@ -463,46 +463,14 @@
 			<img src="${basePath}/upload/index/index_hot.png">
 		</div>
 		<dl>
+			<#list index_right_hotattention_list as irhl>
 			<dt>
-				<a href="http://www.forkiss.com.cn/course.asp" title="点击了解详情"><img
-					src="${basePath}/upload/index/q9.png"></a>
+			<#if irhl.link==""> <a href="javascript:void(0);" title="点击了解详情">
+					<#else> <a href="${irhl.link}" title="点击了解详情"> </#if> <img
+						src="${basePath}/${irhl.path}"></a>
 			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=19"
-					title="点击了解详情"><img src="${basePath}/upload/index/q10.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=36"
-					title="点击了解详情"><img src="${basePath}/upload/index/q8.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=20"
-					title="点击了解详情"><img src="${basePath}/upload/index/q7.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=26"
-					title="第一条测试内容"><img src="${basePath}/upload/index/q1.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=21"
-					title="点击了解详情"><img src="${basePath}/upload/index/q6.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=28"
-					title="点击了解详情"><img src="${basePath}/upload/index/q3.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=25"
-					title="点击了解详情"><img src="${basePath}/upload/index/q2.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=45"
-					title="点击了解详情"><img src="${basePath}/upload/index/q4.png"></a>
-			</dt>
-			<dt>
-				<a href="http://www.forkiss.com.cn/danye-detail.asp?id=22"
-					title="点击了解详情"><img src="${basePath}/upload/index/q5.png"></a>
-			</dt>
+			</#list>
+			
 			<!--  img src="${basePath}/upload/index/index_pic1.png"-->
 		</dl>
 		<div class="title mt10">

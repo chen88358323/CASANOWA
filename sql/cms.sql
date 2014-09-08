@@ -4,7 +4,7 @@ Source Host: 192.168.0.22
 Source Database: cms
 Target Host: 192.168.0.22
 Target Database: cms
-Date: 2014-8-15 23:09:21
+Date: 2014-8-23 16:45:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -68,7 +68,7 @@ CREATE TABLE `attachment` (
   `createTime` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`attachmentId`),
   KEY `idx_kind` (`kind`,`kindId`,`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=ucs2;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=ucs2;
 
 -- ----------------------------
 -- Table structure for comment
@@ -124,7 +124,7 @@ CREATE TABLE `folder` (
   PRIMARY KEY (`folderId`),
   UNIQUE KEY `idx_ename` (`ename`),
   KEY `idx_status` (`fatherId`,`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='目录';
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COMMENT='目录';
 
 -- ----------------------------
 -- Table structure for user
@@ -175,10 +175,20 @@ INSERT INTO `attachment` VALUES ('22', '11', '4.jpg', 'upload/head/4.jpg', '', '
 INSERT INTO `attachment` VALUES ('23', '9', 'IMG_20140711_203652.jpg', '/upload/2014/07/31/1406821184734.jpg', '', '1046519', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-07-31 23:39:44');
 INSERT INTO `attachment` VALUES ('24', '9', 'IMG_20140711_203652.jpg', '/upload/2014/07/31/1406821189031.jpg', '', '1046519', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-07-31 23:39:49');
 INSERT INTO `attachment` VALUES ('25', '9', 'IMG_20140711_203652.jpg', '/upload/2014/07/31/1406821176078.jpg', '', '1046519', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-07-31 23:39:36');
-INSERT INTO `attachment` VALUES ('26', '12', 'head2_studio1.png', 'upload/head/head2_studio1.png', '', '4800', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-02-28 17:34:26');
-INSERT INTO `attachment` VALUES ('27', '12', 'head2_studio2.png', 'upload/head/head2_studio2.png', '', '4800', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-02-28 17:34:26');
-INSERT INTO `attachment` VALUES ('28', '12', 'head2_studio3.png', 'upload/head/head2_studio3.png', '', '4800', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-02-28 17:34:26');
-INSERT INTO `attachment` VALUES ('29', '12', 'head2_studio4.png', 'upload/head/head2_studio4.png', '', '4800', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-02-28 17:34:26');
+INSERT INTO `attachment` VALUES ('30', '15', 'head2_studio1.png', '/upload/2014/08/21/1408632731421.png', '', '49252', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 22:52:11');
+INSERT INTO `attachment` VALUES ('31', '15', 'head2_studio2.png', '/upload/2014/08/21/1408632731562.png', '', '49227', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 22:52:11');
+INSERT INTO `attachment` VALUES ('32', '15', 'head2_studio3.png', '/upload/2014/08/21/1408632731593.png', '', '49744', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 22:52:11');
+INSERT INTO `attachment` VALUES ('33', '15', 'head2_studio4.png', '/upload/2014/08/21/1408632731656.png', '', '57569', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 22:52:11');
+INSERT INTO `attachment` VALUES ('34', '16', 'q10.png', '/upload/2014/08/21/1408633570062.png', '', '5003', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('35', '16', 'q1.png', '/upload/2014/08/21/1408633570125.png', '', '5256', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('36', '16', 'q2.png', '/upload/2014/08/21/1408633570156.png', '', '6131', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('37', '16', 'q3.png', '/upload/2014/08/21/1408633570203.png', '', '5715', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('38', '16', 'q4.png', '/upload/2014/08/21/1408633570250.png', '', '6518', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('39', '16', 'q5.png', '/upload/2014/08/21/1408633570328.png', '', '6450', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('40', '16', 'q6.png', '/upload/2014/08/21/1408633570359.png', '', '6094', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('41', '16', 'q7.png', '/upload/2014/08/21/1408633570437.png', '', '5595', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('42', '16', 'q8.png', '/upload/2014/08/21/1408633570500.png', '', '5609', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
+INSERT INTO `attachment` VALUES ('43', '16', 'q9.png', '/upload/2014/08/21/1408633570578.png', '', '4893', 'photo', 'javascript:void(0);', 'folder', 'display', '2014-08-21 23:06:10');
 INSERT INTO `comment` VALUES ('1', '0', '0', '11', 'folder', 'sdv', 'sdfv', null, '', 'dfbtgebergvergfv', 'localhost:8080', 'hidden', '2014-02-21 14:26:31');
 INSERT INTO `comment` VALUES ('2', '0', '0', '11', 'folder', 'efsfds', 'dfegregregr@qq.com', null, '', 'fovnonoenvolwlkcfnweoifbow', 'localhost:8080', 'hidden', '2014-02-21 14:27:43');
 INSERT INTO `comment` VALUES ('3', '0', '0', '11', 'folder', 'sdfwe', 'ewfdsf', null, '', 'sdfvgfrbvc', 'localhost:8080', 'hidden', '2014-02-21 15:01:15');
@@ -204,3 +214,4 @@ INSERT INTO `folder` VALUES ('12', '0', 'news', '新闻', '12', '', '1', '3', '0
 INSERT INTO `folder` VALUES ('13', '12', 'corp', '公司新闻', '12#13', '', '2', '1', '0', 'everyone', 'article', 'display', 'app', '2014-02-28 15:57:45', null);
 INSERT INTO `folder` VALUES ('14', '12', 'industry', '行业新闻', '12#14', '', '2', '1', '0', 'everyone', 'article', 'display', 'app', '2014-02-28 15:58:12', null);
 INSERT INTO `folder` VALUES ('15', '1', 'head2pic', 'head2图片', '1#15', '', '2', '2', '0', 'everyone', 'photo', 'display', 'app', '2014-08-10 18:07:11', null);
+INSERT INTO `folder` VALUES ('16', '1', 'hotattention', '热门关注', '1#16', '', '2', '3', '0', 'everyone', 'photo', 'display', 'app', '2014-08-21 23:04:32', null);
