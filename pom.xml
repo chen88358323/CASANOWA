@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.shishuo</groupId>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.shishuo</groupId>
 	<artifactId>casanova</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1</version>
-    <dependencies>
-    <dependency>
+	<dependencies>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
@@ -73,11 +73,6 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.20</version>
 		</dependency>
-		<dependency>
-	<groupId>org.apache.ibatis</groupId>
-	<artifactId>ibatis-sqlmap</artifactId>
-	<version>3.0-beta-4</version>
-</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -160,11 +155,11 @@
 			<version>2.4</version>
 			<classifier>jdk15</classifier>
 		</dependency>
-    </dependencies> 
-  <build>
+	</dependencies>
+	<build>
 		<defaultGoal>compile</defaultGoal>
 		<plugins>
-		<plugin>
+			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.7</source>
@@ -194,7 +189,7 @@
 				<configuration>
 					<encoding>UTF-8</encoding>
 				</configuration>
-			</plugin>	
+			</plugin>
 		</plugins>
 	</build>
 	<properties>
@@ -204,112 +199,112 @@
 		<spring.version>3.2.4.RELEASE</spring.version>
 	</properties>
 	<profiles>
-	<!--  开发环境配置 -->
-    <profile>
-        <id>development</id>
-        <properties>
-            <package.environment>development</package.environment>
-        </properties>
-        
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/resources/development</directory>
-                </resource>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>*.xml</include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-    <profile>
-        <id>production</id>
-        <properties>
-            <package.environment>production</package.environment>
-        </properties>
-        <!-- 默认使用此配置，方便jae在git上直接打包发布 -->
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/resources/production</directory>
-                </resource>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>*.xml</include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-    <!--  sae开发环境配置 -->
-    <profile>
-        <id>saeproduction</id>
-        <properties>
-            <package.environment>saeproduction</package.environment>
-        </properties>
-        
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/resources/saeproduction</directory>
-                </resource>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>*.xml</include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-    <!--  mopaas开发环境配置 -->
-    <profile>
-        <id>mopaasproduction</id>
-        <properties>
-            <package.environment>mopaasproduction</package.environment>
-        </properties>
-        
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/resources/mopaasproduction</directory>
-                </resource>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>*.xml</include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-    <!--  jae开发环境配置 -->
-    <profile>
-        <id>jaeproduction</id>
-        <properties>
-            <package.environment>jaeproduction</package.environment>
-        </properties>
-        
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/resources/jaeproduction</directory>
-                </resource>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>*.xml</include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-</profiles>
+		<!-- 开发环境配置 -->
+		<profile>
+			<id>development</id>
+			<properties>
+				<package.environment>development</package.environment>
+			</properties>
+
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources/development</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<includes>
+							<include>*.xml</include>
+						</includes>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<package.environment>production</package.environment>
+			</properties>
+
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources/production</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<includes>
+							<include>*.xml</include>
+						</includes>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<!-- sae开发环境配置 -->
+		<profile>
+			<id>saeproduction</id>
+			<properties>
+				<package.environment>saeproduction</package.environment>
+			</properties>
+
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources/saeproduction</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<includes>
+							<include>*.xml</include>
+						</includes>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<!-- mopaas开发环境配置 -->
+		<profile>
+			<id>mopaasproduction</id>
+			<properties>
+				<package.environment>mopaasproduction</package.environment>
+			</properties>
+			<!-- 默认使用此配置，方便 在git上直接打包发布 -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources/mopaasproduction</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<includes>
+							<include>*.xml</include>
+						</includes>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<!-- jae开发环境配置 -->
+		<profile>
+			<id>jaeproduction</id>
+			<properties>
+				<package.environment>jaeproduction</package.environment>
+			</properties>
+
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources/jaeproduction</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<includes>
+							<include>*.xml</include>
+						</includes>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+	</profiles>
 </project>
