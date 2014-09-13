@@ -79,8 +79,10 @@ public class TemplateService {
 				return this.getTemplatePath(theme);
 			}
 		}
-		throw new TemplateNotFoundException("模板文件："
-				+ this.getTemplatePath(FOLDER_TEMPLATE_PREFIX) + " 不存在！！");
+		String msg ="模板文件："
+				+ this.getTemplatePath(FOLDER_TEMPLATE_PREFIX) + " 不存在！！";
+		logger.info(msg);
+		throw new TemplateNotFoundException(msg);
 	}
 
 	/**
@@ -108,8 +110,10 @@ public class TemplateService {
 				return this.getTemplatePath(theme);
 			}
 		}
-		throw new TemplateNotFoundException("模板文件："
-				+ this.getTemplatePath(FILE_TEMPLATE_PREFIX) + " 不存在！！");
+		String msg ="模板文件："
+				+ this.getTemplatePath(FILE_TEMPLATE_PREFIX) + " 不存在！！";
+		logger.info(msg);
+		throw new TemplateNotFoundException(msg);
 	}
 
 	/**
