@@ -9,11 +9,12 @@
 			tag_attachment_list as attachment>
 			<li><#if attachment.link==""> <a href="javascript:void(0);">
 					<#else> <a href="${attachment.link}"> </#if> <img
-						style="width: 1440px; height: 420px;"
+						style="width: 1000px; height: 420px;margin:auto;"
 						src="${basePath}/${attachment.path}"></a></li> </#list>
 			</@shishuocms_attachment_list>
 		</ul>
-		<ul class="spic">
+		<ul class="spic"  style="margin:auto">
+
 			<!-- 营养工作室  | 摄影工作室  | 母乳喂养工作室 | 导乐分娩工作室-->
 			<#list tag_head2_list as atthead2>
 			<li class="mr10"><#if atthead2.link==""> <a href="#"
